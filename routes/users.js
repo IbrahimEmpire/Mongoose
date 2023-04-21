@@ -10,7 +10,7 @@ mongoose.connect(dburl)
 
 
 
-router.get("/",Role, async function(req, res) {
+router.get("/",validator,Role, async function(req, res) {
 try {
   let users = await userModule.find()
   res.status(200).send({
@@ -20,7 +20,7 @@ try {
   
 } catch (error) {
   res.status(500).send({
-    message:"internal server error",
+    message:"internal server 7 error",
     error
   })
 }
