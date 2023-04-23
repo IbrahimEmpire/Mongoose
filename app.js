@@ -21,6 +21,9 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', indexRouter);
+app.get('/', (req,res)=>{
+  res.send("welcome ")
+})
 app.use('/users', usersRouter);
 app.use('/dashboard', dashboardRouter); 
 
